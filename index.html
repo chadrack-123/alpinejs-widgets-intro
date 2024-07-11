@@ -7,6 +7,29 @@
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.5.2/dist/cdn.min.js" defer></script>
     <script src="counter.js" defer></script>
     <script src="index.js" defer></script>
+
+    <script>
+
+function Counter() {
+    return {
+        count: 0,
+        maxCount: 20,
+        increment() {
+            if (this.count < this.maxCount) {
+                this.count++;
+            }
+        },
+        decrement() {
+            if (this.count > 0) {
+                this.count--;
+            }
+        },
+        reset() {
+            this.count = 0;
+        },
+    };
+}
+    </script>
 </head>
 <body>
     <div x-data="counter">
